@@ -59,8 +59,8 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-32 px-6 sm:px-8 lg:px-12">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-32 px-8 sm:px-12 lg:px-16">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -79,7 +79,7 @@ export default function Projects() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                whileHover={{ y: -12, boxShadow: '0 30px 60px rgba(0, 168, 255, 0.25)' }}
+                whileHover={{ y: -12, boxShadow: '0 30px 60px rgba(167, 139, 250, 0.25)' }}
                 className="group relative glass-effect rounded-2xl overflow-hidden transition-all duration-500"
               >
                 {/* Gradient top accent */}
@@ -97,14 +97,14 @@ export default function Projects() {
                       <motion.button
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className="p-2.5 bg-cyan-500/20 hover:bg-cyan-500/40 rounded-lg text-cyan-400 transition-all duration-300"
+                        className="p-2.5 bg-purple-500/20 hover:bg-purple-500/40 rounded-lg text-purple-400 transition-all duration-300"
                       >
                         <FiGithub size={22} />
                       </motion.button>
                       <motion.button
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className="p-2.5 bg-cyan-500/20 hover:bg-cyan-500/40 rounded-lg text-cyan-400 transition-all duration-300"
+                        className="p-2.5 bg-purple-500/20 hover:bg-purple-500/40 rounded-lg text-purple-400 transition-all duration-300"
                       >
                         <FiExternalLink size={22} />
                       </motion.button>
@@ -121,7 +121,7 @@ export default function Projects() {
                       <motion.span
                         key={i}
                         whileHover={{ scale: 1.08 }}
-                        className="px-3 py-1.5 bg-cyan-500/15 rounded-full text-cyan-300 text-xs font-medium hover:bg-cyan-500/25 transition-all duration-300 cursor-default"
+                        className="px-3 py-1.5 bg-purple-500/15 rounded-full text-purple-300 text-xs font-medium hover:bg-purple-500/25 transition-all duration-300 cursor-default"
                       >
                         {tech}
                       </motion.span>

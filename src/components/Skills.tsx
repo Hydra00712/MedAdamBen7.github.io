@@ -61,8 +61,8 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="py-32 px-6 sm:px-8 lg:px-12">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-32 px-8 sm:px-12 lg:px-16">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           ref={ref}
           variants={containerVariants}

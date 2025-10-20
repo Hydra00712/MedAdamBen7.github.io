@@ -27,7 +27,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="fixed top-0 w-full z-50 glass-effect border-b border-accent/30 backdrop-blur-md"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div

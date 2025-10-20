@@ -25,8 +25,8 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="border-t border-accent/30 bg-gradient-to-b from-transparent to-secondary/40 py-16 px-6 sm:px-8 lg:px-12">
-      <div className="max-w-6xl mx-auto">
+    <footer className="border-t border-accent/30 bg-gradient-to-b from-transparent to-secondary/40 py-16 px-8 sm:px-12 lg:px-16">
+      <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Left Section */}
           <motion.div
