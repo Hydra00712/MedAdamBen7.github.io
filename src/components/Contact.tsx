@@ -105,7 +105,7 @@ export default function Contact() {
                 I'm always interested in hearing about new projects and opportunities. Feel free to reach out and let's connect!
               </p>
 
-              <div className="space-y-5">
+              <div className="space-y-8">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon
                   return (
@@ -114,16 +114,14 @@ export default function Contact() {
                       href={info.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ x: 12, boxShadow: '0 15px 40px rgba(0, 168, 255, 0.2)' }}
+                      whileHover={{ x: 12 }}
                       whileTap={{ scale: 0.98 }}
-                      className="flex items-center gap-5 p-6 glass-effect rounded-xl transition-all duration-300 group cursor-pointer"
+                      className="flex items-center gap-5 transition-all duration-300 group cursor-pointer"
                     >
-                      <div className="p-4 bg-cyan-500/15 rounded-lg group-hover:bg-cyan-500/25 transition-all duration-300">
-                        <Icon className="text-cyan-400 text-2xl" />
-                      </div>
+                      <Icon className="text-purple-400 text-3xl flex-shrink-0 group-hover:text-purple-300 transition-colors" />
                       <div>
                         <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">{info.label}</p>
-                        <p className="text-gray-300 font-semibold text-base">{info.value}</p>
+                        <p className="text-gray-300 font-semibold text-base group-hover:text-purple-300 transition-colors">{info.value}</p>
                       </div>
                     </motion.a>
                   )
@@ -135,7 +133,7 @@ export default function Contact() {
             <motion.form
               variants={itemVariants}
               onSubmit={handleSubmit}
-              className="glass-effect p-10 rounded-2xl space-y-8"
+              className="space-y-8"
             >
               <div>
                 <label className="block text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wide">Name</label>
@@ -145,7 +143,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500 focus:bg-gray-800/70 transition-all duration-300 text-base"
+                  className="w-full px-5 py-4 bg-transparent border-b border-gray-700 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-all duration-300 text-base"
                   placeholder="Your name"
                 />
               </div>
@@ -158,7 +156,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500 focus:bg-gray-800/70 transition-all duration-300 text-base"
+                  className="w-full px-5 py-4 bg-transparent border-b border-gray-700 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-all duration-300 text-base"
                   placeholder="your@email.com"
                 />
               </div>
@@ -171,16 +169,16 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-5 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500 focus:bg-gray-800/70 transition-all duration-300 resize-none text-base"
+                  className="w-full px-5 py-4 bg-transparent border-b border-gray-700 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-all duration-300 resize-none text-base"
                   placeholder="Your message..."
                 />
               </div>
 
               <motion.button
-                whileHover={{ scale: 1.08, boxShadow: '0 20px 50px rgba(0, 168, 255, 0.3)' }}
+                whileHover={{ scale: 1.08, boxShadow: '0 20px 50px rgba(167, 139, 250, 0.3)' }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-black font-bold rounded-lg transition-all duration-300 text-base"
+                className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold rounded-lg transition-all duration-300 text-base"
               >
                 {submitted ? '✓ Message Sent!' : 'Send Message'}
               </motion.button>
